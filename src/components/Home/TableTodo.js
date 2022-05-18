@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 const TableTodo = ({ item, index, refetch }) => {
   const { name, about, isComplete, _id } = item;
   const handleCompleted = (_id) => {
-    const url = `http://localhost:5000/todo/${_id}`;
+    const url = `https://shrouded-sands-59910.herokuapp.com/todo/${_id}`;
 
     fetch(url, {
       method: "PUT",
@@ -20,7 +20,7 @@ const TableTodo = ({ item, index, refetch }) => {
       });
   };
   const handleDelete = (_id) => {
-    const url = `http://localhost:5000/todo/${_id}`;
+    const url = `https://shrouded-sands-59910.herokuapp.com/todo/${_id}`;
     fetch(url, {
       method: "DELETE",
     })

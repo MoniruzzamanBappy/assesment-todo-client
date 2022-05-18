@@ -13,7 +13,7 @@ const Home = () => {
   const [user] = useAuthState(auth);
   const { data, isLoading, refetch } = useQuery(
     "todo",
-    ()=>fetch(`http://localhost:5000/todo?email=${user.email}`)
+    ()=>fetch(`https://shrouded-sands-59910.herokuapp.com/todo?email=${user.email}`)
     .then(res=>res.json())
   );
   if(isLoading){

@@ -16,7 +16,7 @@ const Todo = () => {
     const isComplete = false;
     const todo = { name, email, about, isComplete };
 
-    fetch(`http://localhost:5000/todo`, {
+    fetch(`https://shrouded-sands-59910.herokuapp.com/todo`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
