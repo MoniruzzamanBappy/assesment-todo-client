@@ -29,6 +29,8 @@ const Header = () => {
           <Nav className="ms-auto">
             <CustomLinks to="/home">Home</CustomLinks>
             <CustomLinks to="/todo">Add To-Do</CustomLinks>
+            <CustomLinks to="/todoComplete">Completed Tasks</CustomLinks>
+            <CustomLinks to="/calendar">Calendar</CustomLinks>
             {!user ? (
               <CustomLinks className="login-btn rounded" to="/login">
                 Login

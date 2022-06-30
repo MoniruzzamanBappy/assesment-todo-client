@@ -9,6 +9,8 @@ import Login from "./components/Login/Login";
 import Signup from "./components/Signup/Signup";
 import { ToastContainer } from "react-toastify";
 import NotFound from "./components/NotFound/NotFound";
+import Calendar from "./components/Home/Calendar";
+import Complete from './components/Home/Complete';
 
 function App() {
   return (
@@ -28,6 +30,22 @@ function App() {
           element={
             <RequireAuth>
               <Home></Home>
+            </RequireAuth>
+          }
+        ></Route>
+        <Route
+          path="/calendar"
+          element={
+            <RequireAuth>
+              <Calendar></Calendar>
+            </RequireAuth>
+          }
+        ></Route>
+        <Route
+          path="/todoComplete"
+          element={
+            <RequireAuth>
+              <Complete />
             </RequireAuth>
           }
         ></Route>

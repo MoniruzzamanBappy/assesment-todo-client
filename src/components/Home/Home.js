@@ -37,7 +37,7 @@ const Home = () => {
         </thead>
         <tbody>
             {
-                data.map((item, index)=><TableTodo refetch={refetch} index={index} key={item._id} item={item}></TableTodo>)
+                data?.map((item, index)=><TableTodo refetch={refetch} index={index} key={item._id} item={item}></TableTodo>)
             }
         </tbody>
       </Table>

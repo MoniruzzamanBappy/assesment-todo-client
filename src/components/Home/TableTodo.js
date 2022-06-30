@@ -1,4 +1,5 @@
 import React from "react";
+import { Form } from "react-bootstrap";
 import { toast } from "react-toastify";
 
 const TableTodo = ({ item, index, refetch }) => {
@@ -40,13 +41,15 @@ const TableTodo = ({ item, index, refetch }) => {
         {about.slice(0, 30)}
       </td>
       <td>
-        <button
+        <Form.Group
           onClick={() => handleCompleted(_id)}
-          disabled={isComplete}
-          className="btn mx-auto btn-primary"
+         
+          className="mb-3"
+          controlId="formBasicCheckbox"
         >
-          Done
-        </button>
+          <Form.Check  disabled={isComplete}
+          checked={isComplete} type="checkbox" label="Completed" />
+        </Form.Group>
       </td>
       <td>
         <button
